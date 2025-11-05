@@ -9,10 +9,11 @@ import Dashboard from '@/components/Dashboard';
 import { addPredictions } from '@/lib/timeSeriesDecomposition';
 import { parseTemperatureCSV } from '@/lib/parseTemperatureData';
 import { addTemperaturePredictions } from '@/lib/temperatureDecomposition';
+import { loadRegionalTemperatureData } from '@/lib/parseRegionalTemperature';
 
-interface CountryData {
-  countryName: string;
-  countryCode: string;
+interface RegionData {
+  regionName: string;
+  regionCode: string;
   hero: {
     stat: string;
     subtitle: string;
@@ -23,7 +24,7 @@ interface CountryData {
     value: string;
     icon?: string;
   }>;
-  charts: any;
+  temperatureData?: any[];
 }
 
 interface GlobalData {
@@ -44,16 +45,20 @@ interface GlobalData {
   };
 }
 
-const countries = [
-  { id: 'united-kingdom', name: 'United Kingdom' },
-  { id: 'bangladesh', name: 'Bangladesh' },
-  { id: 'somalia', name: 'Somalia' },
-  { id: 'philippines', name: 'Philippines' },
+const regions = [
+  { id: 'London_UK', name: '🇬🇧 London, UK' },
+  { id: 'USA', name: '🇺🇸 United States' },
+  { id: 'Germany', name: '🇩🇪 Germany' },
+  { id: 'Brazil', name: '🇧🇷 Brazil' },
+  { id: 'India', name: '🇮🇳 India' },
+  { id: 'Australia', name: '🇦🇺 Australia' },
+  { id: 'SouthAfrica', name: '🇿🇦 South Africa' },
+  { id: 'Arctic', name: '🧊 Arctic' },
 ];
 
 export default function Home() {
-  const [selectedCountry, setSelectedCountry] = useState('united-kingdom');
-  const [countryData, setCountryData] = useState<CountryData | null>(null);
+  const [selectedRegion, setSelectedRegion] = useState('London_UK');
+  const [regionData, setRegionData] = useState<RegionData | null>(null);
   const [globalData, setGlobalData] = useState<GlobalData | null>(null);
   const [loading, setLoading] = useState(true);
   const [globalLoading, setGlobalLoading] = useState(true);
@@ -95,24 +100,32 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const fetchCountryData = async () => {
+    const fetchRegionData = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`/data/${selectedCountry}.json`);
+        // Fetch region metadata (hero, summary, metrics)
+        const response = await fetch(`/data/${selectedRegion}.json`);
         const data = await response.json();
-        setCountryData(data);
+        
+        // Load temperature data for this region
+        const tempData = await loadRegionalTemperatureData(selectedRegion);
+        
+        setRegionData({
+          ...data,
+          temperatureData: tempData,
+        });
       } catch (error) {
-        console.error('Error fetching country data:', error);
+        console.error('Error fetching region data:', error);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchCountryData();
-  }, [selectedCountry]);
+    fetchRegionData();
+  }, [selectedRegion]);
 
-  const handleCountrySelect = (countryId: string) => {
-    setSelectedCountry(countryId);
+  const handleRegionSelect = (regionId: string) => {
+    setSelectedRegion(regionId);
   };
 
   if (globalLoading || !globalData) {
@@ -141,51 +154,45 @@ export default function Home() {
             <div className="inline-block h-1 w-24 bg-primary rounded-full mb-6"></div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6">
-            Country-Specific Impacts
+            Regional Temperature Forecasts
           </h2>
           <p className="text-xl text-charcoal/70 leading-relaxed">
-            While climate change is a global crisis, its impacts vary dramatically by region. 
-            Explore how different countries face unique challenges and vulnerabilities.
+            While climate change is a global crisis, warming rates vary dramatically by region. 
+            Explore temperature trends and predictions for key locations around the world through 2050.
           </p>
         </div>
       </section>
 
-      {/* Country Hero Section */}
-      {loading || !countryData ? (
+      {/* Region Hero Section */}
+      {loading || !regionData ? (
         <div className="min-h-[400px] bg-cream flex items-center justify-center">
           <div className="text-center">
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-secondary border-t-primary mb-4"></div>
-            <p className="text-charcoal text-lg">Loading country data...</p>
+            <p className="text-charcoal text-lg">Loading regional data...</p>
           </div>
         </div>
       ) : (
         <>
-          <HeroHeader heroData={countryData.hero} />
-
-          {/* Country Selector */}
+          {/* Region Selector */}
           <CountrySelector
-            countries={countries}
-            selectedCountry={selectedCountry}
-            onSelectCountry={handleCountrySelect}
+            countries={regions}
+            selectedCountry={selectedRegion}
+            onSelectCountry={handleRegionSelect}
           />
 
+          <HeroHeader heroData={regionData.hero} />
+
           {/* Dashboard */}
-          <Dashboard countryData={countryData} />
+          <Dashboard countryData={regionData} />
         </>
       )}
 
       {/* Footer */}
-      <footer className="bg-forest text-cream py-12 px-6">
+      <footer className="bg-forest text-cream py-8 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-4">Climate Impact Showcase</h3>
-          <p className="text-cream/80 mb-6">
-            A demonstration of data-driven climate storytelling by Data4Earth
-          </p>
-          <p className="text-sm text-cream/60">
-            Data sources: Scripps CO₂ Program, NASA GISS, GRACE/GRACE-FO (NASA JPL), World Bank Climate Change Knowledge Portal & ND-GAIN Country Index
-          </p>
-          <p className="text-xs text-cream/50 mt-4">
-            This is a proof-of-concept MVP. Predictions use time-series analysis: CO₂ (linear trend + seasonality), Temperature (polynomial trend), Antarctic Ice (linear regression). All projections assume current trends continue.
+          <h3 className="text-xl font-bold mb-3">Climate Impact Showcase</h3>
+          <p className="text-sm text-cream/70">
+            Data sources: Scripps CO₂ Program, NASA GISS, GRACE/GRACE-FO, Open-Meteo Climate API
           </p>
         </div>
       </footer>

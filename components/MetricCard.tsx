@@ -7,6 +7,7 @@ import {
   AlertTriangle,
   AlertCircle,
   Wind,
+  TrendingUp,
 } from 'lucide-react';
 
 interface MetricCardProps {
@@ -22,6 +23,7 @@ const iconMap = {
   'alert-triangle': AlertTriangle,
   'alert-circle': AlertCircle,
   wind: Wind,
+  'trending-up': TrendingUp,
 };
 
 export default function MetricCard({ label, value, icon = 'thermometer' }: MetricCardProps) {

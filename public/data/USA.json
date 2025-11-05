@@ -1,0 +1,27 @@
+{
+  "regionName": "United States",
+  "regionCode": "US",
+  "hero": {
+    "stat": "+0.25°C",
+    "subtitle": "Average temperature increase per decade in the USA since 1950"
+  },
+  "summary": "The United States shows one of the strongest warming signals among analyzed regions. Rising temperatures are driving more intense wildfires, hurricanes, droughts, and heat waves, affecting communities, infrastructure, and ecosystems nationwide.",
+  "keyMetrics": [
+    {
+      "label": "Temperature Trend (per decade)",
+      "value": "+0.25°C",
+      "icon": "trending-up"
+    },
+    {
+      "label": "2050 Median Forecast",
+      "value": "19.8°C",
+      "icon": "thermometer"
+    },
+    {
+      "label": "2050 High Scenario (95th percentile)",
+      "value": "21.3°C",
+      "icon": "alert-triangle"
+    }
+  ]
+}
+

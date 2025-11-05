@@ -1,0 +1,27 @@
+{
+  "regionName": "India",
+  "regionCode": "IN",
+  "hero": {
+    "stat": "+0.10°C",
+    "subtitle": "Average temperature increase per decade in India since 1950"
+  },
+  "summary": "India's vast population faces mounting climate risks from rising temperatures. Extreme heat events, altered monsoon patterns, and water stress threaten agriculture, public health, and economic development across the subcontinent.",
+  "keyMetrics": [
+    {
+      "label": "Temperature Trend (per decade)",
+      "value": "+0.10°C",
+      "icon": "trending-up"
+    },
+    {
+      "label": "2050 Median Forecast",
+      "value": "33.0°C",
+      "icon": "thermometer"
+    },
+    {
+      "label": "2050 High Scenario (95th percentile)",
+      "value": "34.2°C",
+      "icon": "alert-triangle"
+    }
+  ]
+}
+

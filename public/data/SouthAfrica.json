@@ -1,0 +1,27 @@
+{
+  "regionName": "South Africa",
+  "regionCode": "ZA",
+  "hero": {
+    "stat": "+0.14°C",
+    "subtitle": "Average temperature increase per decade in South Africa since 1950"
+  },
+  "summary": "South Africa faces significant climate challenges with rising temperatures threatening water security, agriculture, and biodiversity. The country's diverse ecosystems are particularly vulnerable to the accelerating pace of climate change.",
+  "keyMetrics": [
+    {
+      "label": "Temperature Trend (per decade)",
+      "value": "+0.14°C",
+      "icon": "trending-up"
+    },
+    {
+      "label": "2050 Median Forecast",
+      "value": "24.9°C",
+      "icon": "thermometer"
+    },
+    {
+      "label": "2050 High Scenario (95th percentile)",
+      "value": "26.2°C",
+      "icon": "alert-triangle"
+    }
+  ]
+}
+

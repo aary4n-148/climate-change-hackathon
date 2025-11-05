@@ -1,0 +1,27 @@
+{
+  "regionName": "London, United Kingdom",
+  "regionCode": "UK",
+  "hero": {
+    "stat": "+0.16°C",
+    "subtitle": "Average temperature increase per decade in London since 1950"
+  },
+  "summary": "London and the UK have experienced consistent warming over the past 75 years. Rising temperatures are contributing to more frequent heatwaves, changing precipitation patterns, and impacts on agriculture and ecosystems across the British Isles.",
+  "keyMetrics": [
+    {
+      "label": "Temperature Trend (per decade)",
+      "value": "+0.16°C",
+      "icon": "trending-up"
+    },
+    {
+      "label": "2050 Median Forecast",
+      "value": "14.9°C",
+      "icon": "thermometer"
+    },
+    {
+      "label": "2050 High Scenario (95th percentile)",
+      "value": "16.2°C",
+      "icon": "alert-triangle"
+    }
+  ]
+}
+

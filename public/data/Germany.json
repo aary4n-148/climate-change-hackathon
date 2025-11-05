@@ -1,0 +1,27 @@
+{
+  "regionName": "Germany",
+  "regionCode": "DE",
+  "hero": {
+    "stat": "+0.17°C",
+    "subtitle": "Average temperature increase per decade in Germany since 1950"
+  },
+  "summary": "Germany has experienced notable warming over the past decades, with impacts on forests, river systems, and agriculture. The country faces increased risk of droughts, floods, and extreme weather events as temperatures continue to rise.",
+  "keyMetrics": [
+    {
+      "label": "Temperature Trend (per decade)",
+      "value": "+0.17°C",
+      "icon": "trending-up"
+    },
+    {
+      "label": "2050 Median Forecast",
+      "value": "13.6°C",
+      "icon": "thermometer"
+    },
+    {
+      "label": "2050 High Scenario (95th percentile)",
+      "value": "14.7°C",
+      "icon": "alert-triangle"
+    }
+  ]
+}
+

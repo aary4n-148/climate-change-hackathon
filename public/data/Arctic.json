@@ -1,0 +1,27 @@
+{
+  "regionName": "Arctic Region",
+  "regionCode": "AR",
+  "hero": {
+    "stat": "+0.59°C",
+    "subtitle": "Average temperature increase per decade in the Arctic since 1950 - the fastest warming on Earth"
+  },
+  "summary": "The Arctic is warming more than twice as fast as the global average, a phenomenon known as Arctic amplification. This rapid warming is causing dramatic sea ice loss, permafrost thaw, ecosystem disruption, and has global climate implications through feedback loops.",
+  "keyMetrics": [
+    {
+      "label": "Temperature Trend (per decade)",
+      "value": "+0.59°C",
+      "icon": "trending-up"
+    },
+    {
+      "label": "2050 Median Forecast",
+      "value": "-5.2°C",
+      "icon": "thermometer"
+    },
+    {
+      "label": "2050 High Scenario (95th percentile)",
+      "value": "-3.5°C",
+      "icon": "alert-triangle"
+    }
+  ]
+}
+

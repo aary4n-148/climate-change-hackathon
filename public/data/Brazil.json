@@ -1,0 +1,27 @@
+{
+  "regionName": "Brazil",
+  "regionCode": "BR",
+  "hero": {
+    "stat": "+0.18°C",
+    "subtitle": "Average temperature increase per decade in Brazil since 1950"
+  },
+  "summary": "Brazil's Amazon rainforest and vast ecosystems face critical threats from rising temperatures. Warming contributes to deforestation, biodiversity loss, altered rainfall patterns, and increased fire risk in the world's largest tropical rainforest.",
+  "keyMetrics": [
+    {
+      "label": "Temperature Trend (per decade)",
+      "value": "+0.18°C",
+      "icon": "trending-up"
+    },
+    {
+      "label": "2050 Median Forecast",
+      "value": "33.7°C",
+      "icon": "thermometer"
+    },
+    {
+      "label": "2050 High Scenario (95th percentile)",
+      "value": "34.6°C",
+      "icon": "alert-triangle"
+    }
+  ]
+}
+
