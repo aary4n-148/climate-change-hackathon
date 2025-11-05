@@ -1,0 +1,37 @@
+{
+  "countryName": "Bangladesh",
+  "countryCode": "BD",
+  "hero": {
+    "stat": "25 Million",
+    "subtitle": "The number of people in Bangladesh at high risk of displacement from sea-level rise by 2050."
+  },
+  "summary": "As one of the world's most low-lying and densely populated deltas, Bangladesh faces an existential threat from sea-level rise and increasingly powerful cyclones. Climate change poses unprecedented challenges to this vulnerable nation.",
+  "keyMetrics": [
+    {
+      "label": "Projected Temp. Rise (by 2050)",
+      "value": "+2.5°C",
+      "icon": "thermometer"
+    },
+    {
+      "label": "ND-GAIN Vulnerability Rank",
+      "value": "166th (Out of 181)",
+      "icon": "alert-triangle"
+    },
+    {
+      "label": "Coastal Population",
+      "value": "46 Million",
+      "icon": "users"
+    }
+  ],
+  "charts": {
+    "seaLevel": [
+      { "year": 2020, "rise_m": 0.1 },
+      { "year": 2030, "rise_m": 0.3 },
+      { "year": 2040, "rise_m": 0.5 },
+      { "year": 2050, "rise_m": 0.7 },
+      { "year": 2075, "rise_m": 1.1 },
+      { "year": 2100, "rise_m": 1.5 }
+    ]
+  }
+}
+

@@ -1,0 +1,37 @@
+{
+  "countryName": "United Kingdom",
+  "countryCode": "GB",
+  "hero": {
+    "stat": "+40%",
+    "subtitle": "The projected increase in rainfall on the UK's wettest days, putting millions at risk of flooding."
+  },
+  "summary": "As climate patterns shift, the United Kingdom faces increasing risks from extreme rainfall events and flooding. Rising temperatures are driving more intense precipitation, threatening infrastructure and communities across the nation.",
+  "keyMetrics": [
+    {
+      "label": "Projected Temp. Rise (by 2050)",
+      "value": "+2.3°C",
+      "icon": "thermometer"
+    },
+    {
+      "label": "ND-GAIN Vulnerability Rank",
+      "value": "14th (Out of 181)",
+      "icon": "shield"
+    },
+    {
+      "label": "Population at Risk",
+      "value": "5.2 Million",
+      "icon": "users"
+    }
+  ],
+  "charts": {
+    "heavyRainfall": [
+      { "year": 2020, "days": 12 },
+      { "year": 2030, "days": 15 },
+      { "year": 2040, "days": 18 },
+      { "year": 2050, "days": 22 },
+      { "year": 2060, "days": 26 },
+      { "year": 2070, "days": 31 }
+    ]
+  }
+}
+

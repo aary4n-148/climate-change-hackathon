@@ -1,0 +1,37 @@
+{
+  "countryName": "Philippines",
+  "countryCode": "PH",
+  "hero": {
+    "stat": "13.6 Million",
+    "subtitle": "The number of Filipinos at high risk from intensifying typhoons and extreme weather events by 2050."
+  },
+  "summary": "The Philippines, an archipelago of over 7,000 islands, faces mounting threats from increasingly powerful typhoons, rising seas, and extreme weather. Its geographical vulnerability makes it one of the most climate-impacted nations globally.",
+  "keyMetrics": [
+    {
+      "label": "Projected Temp. Rise (by 2050)",
+      "value": "+2.2°C",
+      "icon": "thermometer"
+    },
+    {
+      "label": "ND-GAIN Vulnerability Rank",
+      "value": "97th (Out of 181)",
+      "icon": "alert-triangle"
+    },
+    {
+      "label": "Typhoon Frequency Increase",
+      "value": "+35%",
+      "icon": "wind"
+    }
+  ],
+  "charts": {
+    "typhoonIntensity": [
+      { "year": 2020, "category4plus": 3 },
+      { "year": 2030, "category4plus": 4 },
+      { "year": 2040, "category4plus": 5 },
+      { "year": 2050, "category4plus": 7 },
+      { "year": 2060, "category4plus": 9 },
+      { "year": 2070, "category4plus": 11 }
+    ]
+  }
+}
+
