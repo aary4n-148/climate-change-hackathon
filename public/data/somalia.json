@@ -1,0 +1,37 @@
+{
+  "countryName": "Somalia",
+  "countryCode": "SO",
+  "hero": {
+    "stat": "180 Days",
+    "subtitle": "The projected consecutive dry days by 2050, intensifying drought conditions and threatening food security for millions."
+  },
+  "summary": "Somalia is experiencing severe climate-induced droughts with increasing frequency and intensity. These prolonged dry periods devastate agricultural livelihoods and exacerbate humanitarian crises in one of the world's most vulnerable regions.",
+  "keyMetrics": [
+    {
+      "label": "Projected Temp. Rise (by 2050)",
+      "value": "+3.1°C",
+      "icon": "thermometer"
+    },
+    {
+      "label": "ND-GAIN Vulnerability Rank",
+      "value": "181st (Out of 181)",
+      "icon": "alert-circle"
+    },
+    {
+      "label": "Agriculture-Dependent Pop.",
+      "value": "11 Million",
+      "icon": "users"
+    }
+  ],
+  "charts": {
+    "consecutiveDryDays": [
+      { "year": 2020, "days": 95 },
+      { "year": 2030, "days": 120 },
+      { "year": 2040, "days": 145 },
+      { "year": 2050, "days": 180 },
+      { "year": 2060, "days": 210 },
+      { "year": 2070, "days": 235 }
+    ]
+  }
+}
+
