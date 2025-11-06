@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Climate Impact Showcase | Data4Earth",
-  description: "An interactive demonstration of climate change impacts across vulnerable nations, powered by real data and statistical modeling.",
+  title: "Climate Change Dashboard",
+  description: "Historical climate data and statistical forecasts for global temperature, CO2 levels, and Antarctic ice mass.",
 };
 
 export default function RootLayout({

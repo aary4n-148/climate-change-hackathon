@@ -190,7 +190,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-forest text-cream py-8 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-xl font-bold mb-3">Climate Impact Showcase</h3>
+          <h3 className="text-xl font-bold mb-3">Climate Change Dashboard</h3>
           <p className="text-sm text-cream/70">
             Data sources: Scripps CO₂ Program, NASA GISS, GRACE/GRACE-FO, Open-Meteo Climate API
           </p>

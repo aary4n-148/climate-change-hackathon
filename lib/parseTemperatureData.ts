@@ -146,3 +146,4 @@ export function monthlyToYearly(monthlyData: TemperatureMonthlyDataPoint[]): Tem
   return yearlyData.sort((a, b) => a.year - b.year);
 }
 
+

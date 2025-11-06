@@ -23,24 +23,14 @@ export default function GlobalHero() {
       {/* Content */}
       <div className="relative max-w-7xl mx-auto text-center flex flex-col justify-center min-h-[500px] md:min-h-[600px]">
         <div className="transition-all duration-500 ease-in-out transform">
-          {/* Professional Badge */}
-          <div className="mb-6">
-            <div className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-md text-white rounded-full text-lg md:text-xl font-semibold tracking-wide border border-white/20 shadow-lg">
-              <span className="text-[#E07A5F]">Z Climate Change</span>
-              <span className="text-white/50">×</span>
-              <span className="text-secondary">Data4Earth</span>
-            </div>
-          </div>
-          
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 tracking-tight animate-fade-in leading-tight">
-            Our Changing
+            Climate Change
             <br />
-            Planet
+            Dashboard
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed font-light mb-8">
-            Historical data and forecasts reveal the urgent story of our climate. 
-            From rising CO₂ levels to melting ice caps, the evidence is clear.
+            Historical climate data and statistical forecasts based on NASA and NOAA datasets.
           </p>
           
           {/* Data Source Indicator */}

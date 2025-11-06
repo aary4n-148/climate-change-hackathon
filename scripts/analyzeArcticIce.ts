@@ -112,22 +112,15 @@ function analyzeArcticIce() {
 
     // Final summary
     console.log('\n' + '='.repeat(80));
-    console.log('✨ ANALYSIS COMPLETE');
+    console.log('ANALYSIS COMPLETE');
     console.log('='.repeat(80));
-    console.log('\n📣 YOUR PITCH TO THE CLIENT:\n');
-    console.log('   "We analyzed 20+ years of GRACE satellite data measuring Antarctica\'s');
-    console.log('   gravity field. The data is noisy month-to-month, but the trend is');
-    console.log('   undeniable. Using a simple linear regression—the gold standard for');
-    console.log(`   trend analysis—we found that Antarctica is losing ${Math.abs(parseFloat(stats.annualLossRate))} billion`);
-    console.log('   tonnes of ice every single year.');
-    console.log('');
-    console.log('   This isn\'t an estimate. It\'s measured from space. The ice loss is');
-    console.log('   accelerating global sea level rise and disrupting ocean currents.');
-    console.log('   The model has an R² of 0.98, meaning the trend explains 98% of the');
-    console.log('   variance in the data. This is as close to scientific certainty as');
-    console.log('   you can get."\n');
+    console.log('\nSUMMARY:\n');
+    console.log(`   Antarctic ice loss rate: ${Math.abs(parseFloat(stats.annualLossRate))} Gt/year`);
+    console.log(`   R² value: 0.98 (98% of variance explained by linear trend)`);
+    console.log(`   Data: 20+ years of GRACE satellite measurements`);
+    console.log(`   Method: Linear regression\n`);
     console.log('='.repeat(80));
-    console.log('\n🎉 Done!\n');
+    console.log('\nDone.\n');
 
   } catch (error) {
     console.error('❌ Error analyzing ice data:', error);
@@ -137,4 +130,5 @@ function analyzeArcticIce() {
 
 // Run the analysis
 analyzeArcticIce();
+
 
